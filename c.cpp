@@ -52,6 +52,8 @@ std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename) {
 ///  //////////////////////////////
 
 
+
+// Function to transpose a square matrix recursively
 void recursive_transpose(std::vector<std::vector<int>>& matrix,std::vector<std::vector<int>>& dest, int start_row, int start_col, int rows ,int cols) {
     // Base case: If the submatrix is small enough, directly transpose it
     
@@ -59,29 +61,29 @@ void recursive_transpose(std::vector<std::vector<int>>& matrix,std::vector<std::
 
      if(cols*rows==0){return;}
      
-     if (rows * cols <= 32) { //***changing cache size gives performancee of c
-       
+    // printf("start_row %d   start_col %d    rows %d    cols %d",start_row,start_col,rows,cols); helped for_ above condition
+    if (rows * cols <= 81920) { //L1 cache size
+        
         for (int i = 0; i < rows; i++) {//rows,cols is its region
             for (int j = 0; j < cols; j++) {
                 dest[start_col + j][start_row + i]  =matrix[start_row + i][start_col + j];
             }
         }
-    } else {
-        // Recursive case: Recursively break the matrix into two matrices, splitting the larger dimension.
 
-        if(cols>rows){
-            int half_size_cols = cols / 2;
-             int half_size_rows = rows ;
-              recursive_transpose(matrix,dest, start_row, start_col, half_size_rows,half_size_cols);
-              recursive_transpose(matrix,dest, start_row, start_col + half_size_cols,  half_size_rows,cols- half_size_cols);
-        }
-        else{
-             int half_size_rows = rows / 2;
-              int half_size_cols = cols ;
-              recursive_transpose(matrix,dest, start_row , start_col,  half_size_rows,half_size_cols);
-              recursive_transpose(matrix, dest,start_row + half_size_rows, start_col , rows- half_size_rows, half_size_cols);
-        }
-      
+        
+    } else {
+        // Recursive case: Divide the matrix into four quadrants and transpose each recursively
+        int half_size_rows = rows / 2;
+        int half_size_cols = cols / 2;
+   
+        recursive_transpose(matrix,dest, start_row, start_col, half_size_rows,half_size_cols);
+    
+        recursive_transpose(matrix,dest, start_row, start_col + half_size_cols,  half_size_rows,cols- half_size_cols);
+    
+        recursive_transpose(matrix,dest, start_row + half_size_rows, start_col, rows- half_size_rows,half_size_cols);
+     
+        recursive_transpose(matrix, dest,start_row + half_size_rows, start_col + half_size_cols, rows- half_size_rows,cols- half_size_cols);
+           
     }
     
 }
@@ -129,7 +131,7 @@ int main(){
     std::chrono::duration<double> duration = end - start;
 
     // Convert the duration to milliseconds and output
-    std::cout << "Time taken: " << duration.count() *1000 << " miliseconds" << std::endl;
+    std::cout << "Time taken: " << duration.count()*1000 << " miliseconds" << std::endl;
 
 
     // disp(dest);

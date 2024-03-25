@@ -73,7 +73,7 @@ int main(){
     // Get the current time point
     auto start = std::chrono::high_resolution_clock::now();
 
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for(ll i=0;i<r;i++ ){
         for(ll j=0; j<c ;j++){
             dest[j][i]=src[i][j];
@@ -84,7 +84,7 @@ int main(){
     std::chrono::duration<double> duration = end - start;
 
     // Convert the duration to milliseconds and output
-    std::cout << "Time taken: " << duration.count()  << " seconds" << std::endl;
+    std::cout << "Time taken: " << duration.count() *1000 << " miliseconds" << std::endl;
 
 
     // disp(dest);

@@ -11,40 +11,209 @@ Matrix has been stored in the file: out.txt
 popos@pop-os-pk:~/$ python3 check.py 
 Transpose is correct.
 
-// Function to transpose a square matrix recursively
-void recursive_transpose(std::vector<std::vector<int>>& matrix, int start_row, int start_col, int size) {
-    // Base case: If the submatrix is small enough, directly transpose it
-    if (size <= 32) {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < i; j++) {
-                std::swap(matrix[start_row + i][start_col + j], matrix[start_row + j][start_col + i]);
-            }
-        }
-    } else {
-        // Recursive case: Divide the matrix into four quadrants and transpose each recursively
-        int half_size = size / 2;
 
-        // Transpose top-left quadrant
-        recursive_transpose(matrix, start_row, start_col, half_size);
-        // Transpose top-right quadrant
-        recursive_transpose(matrix, start_row, start_col + half_size, half_size);
-        // Transpose bottom-left quadrant
-        recursive_transpose(matrix, start_row + half_size, start_col, half_size);
-        // Transpose bottom-right quadrant
-        recursive_transpose(matrix, start_row + half_size, start_col + half_size, half_size);
 
-        // Combine results by swapping corner result matrices
-        for (int i = 0; i < half_size; i++) {
-            for (int j = 0; j < half_size; j++) {
-                std::swap(matrix[start_row + i][start_col + j + half_size], matrix[start_row + i + half_size][start_col + j]);
-            }
-        }
 
-        // Handle odd size: swap elements along the diagonal
-        if (size % 2 != 0) {
-            for (int i = 0; i < half_size; i++) {
-                std::swap(matrix[start_row + i][start_col + size - 1], matrix[start_row + size - 1][start_col + i]);
-            }
-        }
-    }
-}
+/////////////////////////////////////
+python3 generate.py 
+Enter the number of rows: 10
+Enter the number of columns: 10
+Matrix of size 10x10 generated and stored in 'in.txt'.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+Time taken: 1.892e-06 seconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+Time taken: 0.00143 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+Time taken: 0.001747 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+calling transpose
+Time taken: 4.511e-06 seconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+calling transpose
+Time taken: 0.002766 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10  c 10
+ Reading above
+calling transpose
+Time taken: 0.002379 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ 
+
+
+
+/////////////////////////////////////////////
+
+100*100
+
+python3 generate.py 
+Enter the number of rows: 100
+Enter the number of columns: 100
+Matrix of size 100x100 generated and stored in 'in.txt'.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 100  c 100
+ Reading above
+Time taken: 0.146646 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 100  c 100
+ Reading above
+calling transpose
+Time taken: 0.231284 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 100  c 100
+ Reading above
+calling transpose
+Time taken: 0.225452 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ 
+
+
+/////////////////////////
+
+1000*1000
+
+python3 generate.py 
+Enter the number of rows: 1000
+Enter the number of columns: 1000
+Matrix of size 1000x1000 generated and stored in 'in.txt'.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 1000  c 1000
+ Reading above
+Time taken: 7.13149 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 1000  c 1000
+ Reading above
+calling transpose
+Time taken: 6.4956 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 1000  c 1000
+ Reading above
+calling transpose
+Time taken: 5.71426 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ 
+
+
+
+|||||||||||||||||||||||||||
+python3 generate.py 
+Enter the number of rows: 10000
+Enter the number of columns: 100
+Matrix of size 10000x100 generated and stored in 'in.txt'.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 100
+ Reading above
+Time taken: 4.83733 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 100
+ Reading above
+calling transpose
+Time taken: 6.52632 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 100
+ Reading above
+calling transpose
+Time taken: 5.97959 miliseconds
+Matrix has been stored in the file: out.tx
+
+
+
+///////////////////////////////////////
+
+python3 generate.py 
+Enter the number of rows: 10000   
+Enter the number of columns: 10000
+Matrix of size 10000x10000 generated and stored in 'in.txt'.
+
+
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 10000
+ Reading above
+Time taken: 1448.44 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 10000
+ Reading above
+calling transpose
+Time taken: 614.309 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 10000
+ Reading above
+calling transpose
+Time taken: 558.327 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ 
+
+
+////////////////////////////////////////
+
+popos@pop-os-pk:~/Desktop/Transpose$ python3 generate.py 
+Enter the number of rows: 10000
+Enter the number of columns: 30000
+Matrix of size 10000x30000 generated and stored in 'in.txt'.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   a.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 30000
+ Reading above
+Time taken: 4691.25 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   b.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 30000
+ Reading above
+calling transpose
+Time taken: 1887.04 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ python3 check.py 
+Transpose is correct.
+popos@pop-os-pk:~/Desktop/Transpose$ g++ -fopenmp   c.cpp  -lstdc++
+popos@pop-os-pk:~/Desktop/Transpose$ ./a.out
+r 10000  c 30000
+ Reading above
+calling transpose
+Time taken: 1816.78 miliseconds
+Matrix has been stored in the file: out.txt
+popos@pop-os-pk:~/Desktop/Transpose$ 
+
+

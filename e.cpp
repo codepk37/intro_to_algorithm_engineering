@@ -52,47 +52,31 @@ std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename) {
 ///  //////////////////////////////
 
 
-void recursive_transpose(std::vector<std::vector<int>>& matrix,std::vector<std::vector<int>>& dest, int start_row, int start_col, int rows ,int cols) {
-    // Base case: If the submatrix is small enough, directly transpose it
-    
-     
+#include <vector>
 
-     if(cols*rows==0){return;}
-     
-     if (rows * cols <= 32) { //***changing cache size gives performancee of c
-       
-        for (int i = 0; i < rows; i++) {//rows,cols is its region
-            for (int j = 0; j < cols; j++) {
-                dest[start_col + j][start_row + i]  =matrix[start_row + i][start_col + j];
-            }
+// Function to transpose a submatrix
+void transpose_submatrix(std::vector<std::vector<int>>& matrix, std::vector<std::vector<int>>& dest, int start_row, int start_col, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            dest[start_col + j][start_row + i] = matrix[start_row + i][start_col + j];
         }
-    } else {
-        // Recursive case: Recursively break the matrix into two matrices, splitting the larger dimension.
-
-        if(cols>rows){
-            int half_size_cols = cols / 2;
-             int half_size_rows = rows ;
-              recursive_transpose(matrix,dest, start_row, start_col, half_size_rows,half_size_cols);
-              recursive_transpose(matrix,dest, start_row, start_col + half_size_cols,  half_size_rows,cols- half_size_cols);
-        }
-        else{
-             int half_size_rows = rows / 2;
-              int half_size_cols = cols ;
-              recursive_transpose(matrix,dest, start_row , start_col,  half_size_rows,half_size_cols);
-              recursive_transpose(matrix, dest,start_row + half_size_rows, start_col , rows- half_size_rows, half_size_cols);
-        }
-      
     }
-    
 }
 
-// Function to transpose a matrix recursively
-void transpose(std::vector<std::vector<int>>& src,std::vector<std::vector<int>>& dest) {
-    int row = src.size(); // Size of the matrix
-    int col  = src[0].size();
-   
-    recursive_transpose(src,dest, 0, 0, row,col); // Start recursive transpose from the top-left corner of the matrix
+// Function to transpose a matrix by iterating through blocks
+void transpose_by_blocks(std::vector<std::vector<int>>& src, std::vector<std::vector<int>>& dest, int block_size) {
+    int rows = src.size();
+    int cols = src[0].size();
+
+    for (int i = 0; i < rows; i += block_size) {
+        for (int j = 0; j < cols; j += block_size) {
+            int block_rows = std::min(block_size, rows - i);
+            int block_cols = std::min(block_size, cols - j);
+            transpose_submatrix(src, dest, i, j, block_rows, block_cols);
+        }
+    }
 }
+
 
 int main(){
     
@@ -118,7 +102,7 @@ int main(){
     
     // dest=transpose()
     
-    transpose(src,dest); 
+    transpose_by_blocks(src,dest,32); 
     
 
 
@@ -129,7 +113,7 @@ int main(){
     std::chrono::duration<double> duration = end - start;
 
     // Convert the duration to milliseconds and output
-    std::cout << "Time taken: " << duration.count() *1000 << " miliseconds" << std::endl;
+    std::cout << "Time taken: " << duration.count()*1000 << " miliseconds" << std::endl;
 
 
     // disp(dest);
