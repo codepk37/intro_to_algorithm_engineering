@@ -1,0 +1,457 @@
+a.cpp r 10  c 10
+ Reading above
+Time taken: 0.000702 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10  c 10
+ Reading above
+calling transpose
+Time taken: 0.000983 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10  c 10
+ Reading above
+calling transpose
+Time taken: 0.000854 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10  c 10
+ Reading above
+calling transpose
+Time taken: 0.000884 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100  c 100
+ Reading above
+Time taken: 0.050125 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100  c 100
+ Reading above
+calling transpose
+Time taken: 0.055188 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100  c 100
+ Reading above
+calling transpose
+Time taken: 0.055662 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100  c 100
+ Reading above
+calling transpose
+Time taken: 0.057299 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 1000  c 10
+ Reading above
+Time taken: 0.063183 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 10
+ Reading above
+calling transpose
+Time taken: 0.066775 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 10
+ Reading above
+calling transpose
+Time taken: 0.049847 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 10
+ Reading above
+calling transpose
+Time taken: 0.052343 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 10  c 1000
+ Reading above
+Time taken: 0.061284 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10  c 1000
+ Reading above
+calling transpose
+Time taken: 0.061235 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10  c 1000
+ Reading above
+calling transpose
+Time taken: 0.061762 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10  c 1000
+ Reading above
+calling transpose
+Time taken: 0.055762 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 1000  c 100
+ Reading above
+Time taken: 0.502076 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 100
+ Reading above
+calling transpose
+Time taken: 0.563485 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 100
+ Reading above
+calling transpose
+Time taken: 0.583999 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 100
+ Reading above
+calling transpose
+Time taken: 1.01919 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100  c 1000
+ Reading above
+Time taken: 0.827808 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100  c 1000
+ Reading above
+calling transpose
+Time taken: 0.551364 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100  c 1000
+ Reading above
+calling transpose
+Time taken: 0.521204 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100  c 1000
+ Reading above
+calling transpose
+Time taken: 0.573555 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 1000  c 1000
+ Reading above
+Time taken: 7.29976 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 1000
+ Reading above
+calling transpose
+Time taken: 5.94206 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 1000
+ Reading above
+calling transpose
+Time taken: 5.95388 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 1000
+ Reading above
+calling transpose
+Time taken: 6.1955 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 10000  c 100
+ Reading above
+Time taken: 5.24063 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10000  c 100
+ Reading above
+calling transpose
+Time taken: 7.5908 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10000  c 100
+ Reading above
+calling transpose
+Time taken: 8.22848 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10000  c 100
+ Reading above
+calling transpose
+Time taken: 7.82944 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100  c 10000
+ Reading above
+Time taken: 12.7041 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100  c 10000
+ Reading above
+calling transpose
+Time taken: 8.67712 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100  c 10000
+ Reading above
+calling transpose
+Time taken: 7.76354 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100  c 10000
+ Reading above
+calling transpose
+Time taken: 6.20017 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 10000  c 1000
+ Reading above
+Time taken: 71.9068 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10000  c 1000
+ Reading above
+calling transpose
+Time taken: 60.9241 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10000  c 1000
+ Reading above
+calling transpose
+Time taken: 72.2375 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10000  c 1000
+ Reading above
+calling transpose
+Time taken: 58.8634 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 1000  c 10000
+ Reading above
+Time taken: 115.482 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 10000
+ Reading above
+calling transpose
+Time taken: 62.8026 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 10000
+ Reading above
+calling transpose
+Time taken: 57.616 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 10000
+ Reading above
+calling transpose
+Time taken: 58.9302 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100000  c 100
+ Reading above
+Time taken: 50.2971 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100000  c 100
+ Reading above
+calling transpose
+Time taken: 57.8024 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100000  c 100
+ Reading above
+calling transpose
+Time taken: 81.5196 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100000  c 100
+ Reading above
+calling transpose
+Time taken: 62.6351 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100  c 100000
+ Reading above
+Time taken: 198.628 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100  c 100000
+ Reading above
+calling transpose
+Time taken: 71.7105 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100  c 100000
+ Reading above
+calling transpose
+Time taken: 95.9524 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100  c 100000
+ Reading above
+calling transpose
+Time taken: 60.7536 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 10000  c 10000
+ Reading above
+Time taken: 1533.32 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10000  c 10000
+ Reading above
+calling transpose
+Time taken: 622.928 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10000  c 10000
+ Reading above
+calling transpose
+Time taken: 649.921 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10000  c 10000
+ Reading above
+calling transpose
+Time taken: 581.534 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 100000  c 1000
+ Reading above
+Time taken: 737.077 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 100000  c 1000
+ Reading above
+calling transpose
+Time taken: 581.681 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 100000  c 1000
+ Reading above
+calling transpose
+Time taken: 772.895 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 100000  c 1000
+ Reading above
+calling transpose
+Time taken: 589.86 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+
+a.cpp r 1000  c 100000
+ Reading above
+Time taken: 1868.89 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 555.799 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 707.408 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 551.797 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 10000  c 30000
+ Reading above
+Time taken: 4849.21 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 10000  c 30000
+ Reading above
+calling transpose
+Time taken: 1899.29 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 10000  c 30000
+ Reading above
+calling transpose
+Time taken: 1874.46 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 10000  c 30000
+ Reading above
+calling transpose
+Time taken: 1762.73 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 30000  c 10000
+ Reading above
+Time taken: 4856.72 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 30000  c 10000
+ Reading above
+calling transpose
+Time taken: 1860.38 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 30000  c 10000
+ Reading above
+calling transpose
+Time taken: 1943.41 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 30000  c 10000
+ Reading above
+calling transpose
+Time taken: 1876.64 miliseconds
+Matrix has been stored in the file: out.txt
+
+
+a.cpp r 1000  c 100000
+ Reading above
+Time taken: 1868.89 miliseconds
+Matrix has been stored in the file: out.txt
+
+b1.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 555.799 miliseconds
+Matrix has been stored in the file: out.txt
+
+b2.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 707.408 miliseconds
+Matrix has been stored in the file: out.txt
+
+c.cpp r 1000  c 100000
+ Reading above
+calling transpose
+Time taken: 551.797 miliseconds
+Matrix has been stored in the file: out.txt
+
+
